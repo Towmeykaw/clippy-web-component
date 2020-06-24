@@ -27,7 +27,7 @@ export class ClippyElement extends LitElement {
         height: '0px'
     };
     @property({type: String})
-    name = 'Bonzi';
+    name = 'Clippy';
     @property({type: String})
     hide = 'false';
     @property({type: Number})

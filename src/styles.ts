@@ -12,33 +12,33 @@ export const agentStyles = css`
         flex-direction: column;
     }
     #Clippy {
-        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/assets/agents/Clippy/clippy.png');
+        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/agents/Clippy/clippy.png');
     }
     #Merlin {
-        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/assets/agents/Merlin/merlin.png');
+        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/agents/Merlin/merlin.png');
     }
     #Bonzi {
-        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/assets/agents/Bonzi/bonzi.png');
+        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/agents/Bonzi/bonzi.png');
     }
     #F1 {
-        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/assets/agents/F1/f1.png');
+        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/agents/F1/f1.png');
     }
     #Genie {
-        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/assets/agents/Genie/genie.png');
+        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/agents/Genie/genie.png');
     }
     #Genius {
-        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/assets/agents/Genius/genius.png');
+        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/agents/Genius/genius.png');
     }
     #Links {
-        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/assets/agents/Links/links.png');
+        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/agents/Links/links.png');
     }
     #Peedy {
-        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/assets/agents/Peedy/peedy.png');
+        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/agents/Peedy/peedy.png');
     }
     #Rocky {
-        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/assets/agents/Rocky/rocky.png');
+        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/agents/Rocky/rocky.png');
     }
     #Rover {
-        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/assets/agents/Rover/rover.png');
+        background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/agents/Rover/rover.png');
     }
 `;
