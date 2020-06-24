@@ -1,0 +1,36 @@
+{
+  "name": "clippy-web-component",
+  "version": "0.0.1",
+  "description": "A Clippy web component",
+  "main": "clippy.js",
+  "module": "clippy.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --watch",
+    "lint": "lit-analyzer && eslint 'src/**/*.ts'",
+    "format": "prettier src/* --write",
+    "serve": "es-dev-server --node-resolve --watch"
+  },
+  "keywords": [
+    "web component",
+    "lit-element",
+    "typescript",
+    "clippy"
+  ],
+  "author": "Towmeykaw",
+  "license": "MIT",
+  "dependencies": {
+    "lit-element": "^2.3.1",
+    "rxjs": "^6.5.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.4.0",
+    "@typescript-eslint/parser": "^3.4.0",
+    "es-dev-server": "^1.55.1",
+    "eslint": "^7.3.1",
+    "lit-analyzer": "^1.1.11",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.5",
+    "typescript-lit-html-plugin": "^0.9.0"
+  }
+}
