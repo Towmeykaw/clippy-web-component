@@ -8,4 +8,3 @@ export class Loader {
             '/sounds-mp3.json').then((resp) => resp.json());
     }
 }
-//# sourceMappingURL=loader.js.map

@@ -215,4 +215,3 @@ export class Animator {
         });
     }
 }
-//# sourceMappingURL=animator.js.map

@@ -1,14 +1,15 @@
 import { css } from 'lit-element';
 export const agentStyles = css `
     .agent {
-        z-index: 999999;
         pointer-events: all;
         flex-grow: 1;
     }
     .agent-container {
+        z-index: 999999;
         position: absolute;
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
     #Clippy {
         background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/agents/Clippy/clippy.png');
@@ -41,4 +42,3 @@ export const agentStyles = css `
         background: url('https://raw.githubusercontent.com/Towmeykaw/clippy-web-component/main/agents/Rover/rover.png');
     }
 `;
-//# sourceMappingURL=styles.js.map

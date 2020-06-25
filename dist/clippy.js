@@ -199,4 +199,3 @@ ClippyElement = __decorate([
     customElement('clippy-element')
 ], ClippyElement);
 export { ClippyElement };
-//# sourceMappingURL=clippy.js.map

@@ -6,7 +6,8 @@
   "module": "dist/clippy.js",
   "type": "module",
   "scripts": {
-    "build": "tsc --watch",
+    "build": "tsc --watch -p tsconfig.dev.json",
+    "compile": "tsc -p tsconfig.prod.json",
     "lint": "lit-analyzer && eslint 'src/**/*.ts'",
     "format": "prettier src/* --write",
     "serve": "es-dev-server --node-resolve --watch"

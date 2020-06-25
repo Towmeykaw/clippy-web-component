@@ -91,4 +91,3 @@ __decorate([
 BalloonElement = __decorate([
     customElement('balloon-element')
 ], BalloonElement);
-//# sourceMappingURL=balloon.js.map
