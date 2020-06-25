@@ -1,9 +1,9 @@
 {
   "name": "clippy-web-component",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Clippy web component",
-  "main": "clippy.js",
-  "module": "clippy.js",
+  "main": "dist/clippy.js",
+  "module": "dist/clippy.js",
   "type": "module",
   "scripts": {
     "build": "tsc --watch",
