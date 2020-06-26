@@ -1,7 +1,7 @@
 import {Animations, Frame, Animation, AnimationStates} from './animations';
 import {Queue} from './queue';
-import {BehaviorSubject} from 'rxjs';
 import {Loader} from './loader';
+import {LitElement} from 'lit-element';
 
 export class Animator {
     private started = false;
@@ -16,8 +16,10 @@ export class Animator {
     private animations: Animations | undefined;
     private queue: Queue;
     private loader: Loader;
+    private clippy: LitElement;
 
-    constructor() {
+    constructor(clippy: LitElement) {
+        this.clippy = clippy;
         this.queue = new Queue();
         this.loader = new Loader();
         this.queue.createCallback(this.onQueueEmpty.bind(this));
@@ -44,10 +46,14 @@ export class Animator {
         return await this.loader.loadSounds(name);
     }
 
-    public backgroundState = new BehaviorSubject('0px 0px');
-
     changePos(pos: string) {
-        this.backgroundState.next(pos);
+        let event = new CustomEvent('backgroundState', {
+            detail: {
+                pos: pos
+            }
+        });
+
+        this.clippy.dispatchEvent(event);
     }
 
     public clearTimeout() {

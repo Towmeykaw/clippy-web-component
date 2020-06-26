@@ -63,7 +63,7 @@ let ClippyElement = class ClippyElement extends LitElement {
         this.pos1 = this.pos2 = this.pos3 = this.pos4 = 0;
         this.agentType = this.name;
         document.onmouseup = this.closeDragElement;
-        this.animator = new Animator();
+        this.animator = new Animator(this);
         this.animator.SetupData(this.agentType).then(() => {
             let frameSize = this.animator.GetFramesize();
             if (frameSize) {
@@ -74,13 +74,13 @@ let ClippyElement = class ClippyElement extends LitElement {
                 this.showElement();
             }
         });
-        this.animator.backgroundState.subscribe((state) => {
+        this.addEventListener('backgroundState', (e) => {
             this.backgroundPosition = {
-                'background-position': state,
+                'background-position': e.detail.pos,
                 width: this.width + 'px',
                 height: this.height + 'px'
             };
-        });
+        }, false);
     }
     static get styles() {
         return [agentStyles];

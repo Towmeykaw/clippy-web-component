@@ -1,13 +1,12 @@
 import { AnimationStates } from './animations';
 import { Queue } from './queue';
-import { BehaviorSubject } from 'rxjs';
 import { Loader } from './loader';
 export class Animator {
-    constructor() {
+    constructor(clippy) {
         this.started = false;
         this.exiting = false;
         this.currentFrameIndex = 0;
-        this.backgroundState = new BehaviorSubject('0px 0px');
+        this.clippy = clippy;
         this.queue = new Queue();
         this.loader = new Loader();
         this.queue.createCallback(this.onQueueEmpty.bind(this));
@@ -27,7 +26,12 @@ export class Animator {
         return await this.loader.loadSounds(name);
     }
     changePos(pos) {
-        this.backgroundState.next(pos);
+        let event = new CustomEvent('backgroundState', {
+            detail: {
+                pos: pos
+            }
+        });
+        this.clippy.dispatchEvent(event);
     }
     clearTimeout() {
         clearTimeout(this.loop);

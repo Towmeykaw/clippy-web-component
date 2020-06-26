@@ -22,7 +22,9 @@ let BalloonElement = class BalloonElement extends LitElement {
         return html `
             ${this.speakText !== ''
             ? html ` <div id="balloon" class="clippy-balloon">
-                      <div id="balloon-content" class="clippy-content">${this.shownText}</div>
+                      <div id="balloon-content" class="clippy-content">
+                          ${this.shownText}
+                      </div>
                       <div class="clippy-tip"></div>
                   </div>`
             : html ``}

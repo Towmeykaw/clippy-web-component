@@ -43,7 +43,6 @@ export class ClippyElement extends LitElement {
 
     render() {
         let containerStyle = {top: this.top + 'px', left: this.left + 'px'};
-
         return html`
             <div
                 id="clippy-agent"
@@ -73,7 +72,7 @@ export class ClippyElement extends LitElement {
         this.pos1 = this.pos2 = this.pos3 = this.pos4 = 0;
         this.agentType = this.name;
         document.onmouseup = this.closeDragElement;
-        this.animator = new Animator();
+        this.animator = new Animator(this);
         this.animator.SetupData(this.agentType).then(() => {
             let frameSize = this.animator!.GetFramesize();
             if (frameSize) {
@@ -84,13 +83,17 @@ export class ClippyElement extends LitElement {
                 this.showElement();
             }
         });
-        this.animator.backgroundState.subscribe((state: string) => {
-            this.backgroundPosition = {
-                'background-position': state,
-                width: this.width + 'px',
-                height: this.height + 'px'
-            };
-        });
+        this.addEventListener(
+            'backgroundState',
+            (e: Event) => {
+                this.backgroundPosition = {
+                    'background-position': (e as CustomEvent).detail.pos,
+                    width: this.width + 'px',
+                    height: this.height + 'px'
+                };
+            },
+            false
+        );
     }
 
     updated(changedProperties: Map<string, any>) {
