@@ -1,25 +1,35 @@
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/clippy-web-component)
+
 # clippy-web-component
 A Web Component for adding Clippy to a website
 
 ## Install
 
-`npm install clippy-web-component`
+```
+npm install clippy-web-component
+```
 
 ## Example Usage
 
 ### LitElement
-`import 'clippy-web-component'`
+```html
+import 'clippy-web-component'
 
-`<clippy-element .name="Bonzi" .hide=true .speakText="Hello world"></clippy-element>`
+<clippy-element .name="Bonzi" .hide=true .speakText="Hello world"></clippy-element>
+```
 
 ### Angular 
-`import 'clippy-web-component'`
+```html
+import 'clippy-web-component'
 
-`<clippy-element speakText="Hello world"></clippy-element>`
+<clippy-element speakText="Hello world"></clippy-element>
+```
 
 Also in your app.module.ts add 
 
-`schemas: [ CUSTOM_ELEMENTS_SCHEMA ],` 
+```
+schemas: [ CUSTOM_ELEMENTS_SCHEMA ], 
+```
 
 ### Available properties
 
